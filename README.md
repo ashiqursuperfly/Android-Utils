@@ -12,6 +12,10 @@ dataBinding {
         enabled = true
 }
 ```
+and on top of the file
+```groovy
+apply plugin: 'kotlin-kapt'
+```
 
 --1.2 Inside **defaultConfig {}**
 ```groovy
