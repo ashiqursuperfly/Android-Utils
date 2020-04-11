@@ -22,13 +22,20 @@ multiDexEnabled true
 
 ```groovy
 dependencies {
-    implementation todo:jitpackurl
+    implementation 'com.github.ashiqursuperfly:Android-Utils:v1.0.0'
 }
 ```
 
-3. Setting up project level build.gradle
+3. Setting up **project level** build.gradle
 
--add jitpack.io repository
+```groovy
+allprojects {
+		repositories {
+			maven { url 'https://jitpack.io' }
+		}
+}
+```
+
 
 4. Creating a new app that extends BaseApplication()
 
