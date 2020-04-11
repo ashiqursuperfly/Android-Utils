@@ -3,28 +3,36 @@
 #### Setup
 
 1. Setting up app level build.gradle
+
 1.1 Add this under **android {}** just after buildToolsVersion
+
 ```groovy
 dataBinding {
         enabled = true
 }
 ```
-1.2 Inside defaultConfig {}
+
+1.2 Inside **defaultConfig {}**
+
 ```groovy
 multiDexEnabled true
 ```
 
 2. Setting up Dependency
+
 ```groovy
 dependencies {
     implementation todo:jitpackurl
 }
 ```
+
 3. Setting up project level build.gradle
-add jitpack.io repository
+
+-add jitpack.io repository
 
 4. Creating a new app that extends BaseApplication()
-4.1
+
+4.1 Creating the kotlin app
 ```kotlin
 class MyApp : BaseApplication() {
     override fun afterOnCreate() {
@@ -32,6 +40,7 @@ class MyApp : BaseApplication() {
     }
 }
 ```
+
 4.2 Dont forget to register the app in manifest.xml like,
 ```xml
  <application
