@@ -25,7 +25,8 @@ multiDexEnabled true
 **2.** Setting up Dependency
 ```groovy
 dependencies {
-    implementation 'com.github.ashiqursuperfly:Android-Utils:v1.0.0'
+    implementation "androidx.multidex:multidex:x.x.x"
+    implementation 'com.github.ashiqursuperfly:Android-Utils:vx.x.x'
 }
 ```
 
