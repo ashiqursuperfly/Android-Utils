@@ -4,44 +4,40 @@
 
 #### Setup
 
-1. Setting up app level build.gradle
+**1.** Setting up app level build.gradle
 
-1.1 Add this under **android {}** just after buildToolsVersion
-
+--1.1 Add this under **android {}** just after buildToolsVersion
 ```groovy
 dataBinding {
         enabled = true
 }
 ```
 
-1.2 Inside **defaultConfig {}**
-
+--1.2 Inside **defaultConfig {}**
 ```groovy
 multiDexEnabled true
 ```
 
-2. Setting up Dependency
-
+**2.** Setting up Dependency
 ```groovy
 dependencies {
     implementation 'com.github.ashiqursuperfly:Android-Utils:v1.0.0'
 }
 ```
 
-3. Setting up **project level** build.gradle
-
+**3.** Setting up **project level** build.gradle
 ```groovy
 allprojects {
-		repositories {
-			maven { url 'https://jitpack.io' }
-		}
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
 }
 ```
 
 
-4. Creating a new app that extends BaseApplication()
+**4.** Creating a new app that extends BaseApplication()
 
-4.1 Creating the kotlin app
+--4.1 Creating the kotlin app
 ```kotlin
 class MyApp : BaseApplication() {
     override fun afterOnCreate() {
@@ -50,7 +46,7 @@ class MyApp : BaseApplication() {
 }
 ```
 
-4.2 Dont forget to register the app in manifest.xml like,
+--4.2 Dont forget to register the app in manifest.xml like,
 ```xml
  <application
         android:name=".MyApp" 
