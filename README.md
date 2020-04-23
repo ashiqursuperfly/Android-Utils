@@ -3,6 +3,7 @@
 [![](https://jitpack.io/v/ashiqursuperfly/Android-Utils.svg)](https://jitpack.io/#ashiqursuperfly/Android-Utils)
 
 #### Setup
+##### Note: this project requires minSdkVersion to be 21 or above
 
 **1.** Setting up app level build.gradle
 
